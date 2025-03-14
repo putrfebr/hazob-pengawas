@@ -1,0 +1,146 @@
+body {
+    position: relative;
+    background-image: url(../img/img1.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+}
+.logo {
+    color: white;
+    font-size: 24px;
+    font-family: Poppins, sans-serif;
+    font-weight: bold;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Logo kiri, menu tengah, profil kanan */
+    position: fixed; /* Supaya tetap di atas */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 20px;
+    background: transparent; /* Transparan di awal */
+    transition: background 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1px;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.menu li {
+    position: relative;
+    margin-right: 0 15px;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: Poppins, sans-serif;
+    padding: 10px 15px;
+    display: inline-block;
+}
+
+.menu a:hover {
+    color: #dcc600;
+}
+
+/* Submenu Styling */
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    top: 100%;
+    left: 0;
+    width: 180px;
+}
+
+.submenu li {
+    padding: 0;
+}
+
+.submenu a {
+    display: block;
+    color: black;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.submenu a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Show submenu on hover */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.profile {
+    position: relative;
+    top: 5px;
+    right: 15px;
+    background:transparent;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.profile:hover {
+    background: #e3e5e5;
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+/* Efek saat di-scroll */
+.scrolled {
+    background: rgba(195, 63, 63, 0.8); /* Ubah jadi hitam transparan */
+}
+#news-container {
+    position: fixed; /* Tetap di posisi tertentu */
+    bottom: 50px;    /* Jarak dari bawah */
+    left: 20px;      /* Jarak dari kiri */
+    width: 300px;    /* Atur ukuran sesuai kebutuhan */
+    height: 500px;
+    background: rgba(255, 255, 255, 0.9); /* Latar belakang semi transparan */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    overflow-y: auto; /* Kalau terlalu panjang, bisa di-scroll */
+    max-height: 200px; /* Batas tinggi */
+}
+
+.news-item {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+.news-item:last-child {
+    border-bottom: none;
+}

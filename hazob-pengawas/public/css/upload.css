@@ -1,0 +1,37 @@
+body {
+    position: relative;
+    background-image: url(../img/img3.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+}
+.temp-photo{
+    height: 100px;
+}
+
+.uploader-btn{
+    height: 100px;
+    width: 100px;
+}
+.uploader-btn:active{
+    background-color: #f3f3f3;
+}
+.photo-to-upload{
+    animation: aniToLeft 0.5s ease-in-out;
+}
+
+.photo-show{
+    height: 100px;
+    overflow: scroll;
+    display: flex;
+}
+
+@keyframes aniToLeft {
+    from {
+        transform: translateX(20px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}
